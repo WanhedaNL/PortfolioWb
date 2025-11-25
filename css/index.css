@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Kleuren en effecten voor het hele thema */
+    --bg: #050b1c;
+    --panel: rgba(14, 23, 42, 0.9);
+    --text: #e8ecf7;
+    --muted: #aab4d4;
+    --accent: #f97316;
+    --accent-2: #38bdf8;
+    --stroke: rgba(255, 255, 255, 0.08);
+    --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Ruimtelijk grotesk lettertype en basis lay-out instellingen */
+    font-family: 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 18px 32px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    /* Grote wazige lichtvlekken op de achtergrond */
+    content: "";
+    position: fixed;
+    top: -40%;
+    left: -20%;
+    right: -20%;
+    height: 60%;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.25), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(124, 58, 237, 0.3), transparent 35%);
+    filter: blur(40px);
+    z-index: -2;
+}
+
+body::after {
+    /* Subtiel sterren/stip patroon */
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        radial-gradient(1px 1px at 20% 30%, rgba(255, 255, 255, 0.15), transparent),
+        radial-gradient(1px 1px at 70% 60%, rgba(255, 255, 255, 0.08), transparent);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+body > * {
+    width: min(1100px, 100%);
+}
+
+header {
+    /* Glazige hero met zachte kleurverloopgloed */
+    text-align: center;
+    padding: 48px 36px;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(124, 58, 237, 0.25));
+    border-radius: 24px;
+    border: 1px solid var(--stroke);
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(249, 115, 22, 0.38), transparent 50%);
+    top: -80px;
+    right: -60px;
+    filter: blur(2px);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.35), transparent 55%);
+    bottom: -70px;
+    left: -50px;
+    filter: blur(2px);
+}
+
+header h1 {
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 640px;
+    margin: 12px auto 26px;
+}
+
+header a {
+    /* Opvallende call-to-action knop */
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--accent);
+    color: #0b0b0f;
+    text-decoration: none;
+    border-radius: 14px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    box-shadow: 0 18px 36px rgba(249, 115, 22, 0.45);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+header a:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 20px 42px rgba(249, 115, 22, 0.55);
+}
+
+main {
+    /* Helder verticaal ritme tussen secties */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+section {
+    /* Halftransparante kaartstijl */
+    background: var(--panel);
+    padding: 22px 20px;
+    border-radius: 18px;
+    border: 1px solid var(--stroke);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+}
+
+section h2 {
+    /* Sectietitel met lichte code-regel vibe */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: var(--accent-2);
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+}
+
+section h2::before {
+    content: "//";
+    color: var(--accent);
+    font-weight: 700;
+}
+
+#about p {
+    color: var(--muted);
+    max-width: 880px;
+    font-size: 1rem;
+}
+
+#skills ul {
+    /* Skill-badges naast elkaar laten vloeien */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+#skills li {
+    /* Pill-badges: licht glanzend en verheven */
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: #dbeafe;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+    transition: transform 0.15s ease, border-color 0.2s ease;
+}
+
+#skills li:hover {
+    transform: translateY(-2px);
+    border-color: rgba(249, 115, 22, 0.45);
+}
+
+#projects {
+    /* Projectkaarten in een grid zetten */
+    display: grid;
+    gap: 14px;
+}
+
+#projects article {
+    /* Kaart met gloed op hover langs de rand */
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    padding: 18px 16px;
+    background: linear-gradient(160deg, rgba(15, 23, 42, 0.92), rgba(12, 19, 34, 0.86));
+    border: 1px solid var(--stroke);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+#projects article::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(120deg, rgba(56, 189, 248, 0.25), rgba(249, 115, 22, 0.35));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 0;
+}
+
+#projects article:hover {
+    transform: translateY(-3px);
+    border-color: rgba(249, 115, 22, 0.45);
+}
+
+#projects article:hover::before {
+    opacity: 0.8;
+}
+
+#projects h3 {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8px;
+    color: #cbd5ff;
+}
+
+#projects p {
+    position: relative;
+    z-index: 1;
+    color: var(--muted);
+}
+
+#contact p {
+    color: var(--muted);
+}
+
+#contact a {
+    /* Contactlinks extra accent */
+    color: #fde68a;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(249, 115, 22, 0.6);
+    padding-bottom: 2px;
+}
+
+#contact a:hover {
+    color: var(--accent-2);
+    border-bottom-color: rgba(56, 189, 248, 0.8);
+}
+
+a {
+    color: var(--accent-2);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7dd3fc;
+}
+
+footer {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
