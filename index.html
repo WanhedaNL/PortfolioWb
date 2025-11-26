@@ -1,42 +1,40 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="nl">
 <head>
-    <!-- Tarayıcıya bu dosyanın karakter setini söylüyoruz -->
+    <!-- We vertellen de browser welk karakterset dit bestand gebruikt -->
     <meta charset="UTF-8">
     
-    <!-- Sayfanın mobilde düzgün görünmesini sağlar -->
+    <!-- Zorgt ervoor dat de pagina goed wordt weergegeven op mobiele apparaten -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Sekmede gözüken başlık -->
+    <!-- Titel die in het browsertabblad verschijnt -->
     <title>Merha Ben Cesim | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    
 </head>
 <body>
-    <!-- 1) Üst Kısım / Hero Bölümü -->
+
+    <!-- 1) Bovenste gedeelte / Hero sectie -->
     <header>
-        <h1>Merha ben Cesim</h1>
-        <p>Software Developer Öğrencisi | Python & JavaScript</p>
-        <a href="#projects">Projelerime Git</a>
+        <h1 id="big">Hallo ik ben Cesim </h1>
+        <p>Software Developer Student | Python & JavaScript</p>
+        <a href="#projects">Ga naar mijn projecten</a>
     </header>
 
     <main>
-        <!-- 2) Hakkımda Bölümü -->
+        <!-- 2) Over mij sectie -->
         <section id="about">
-            <h2>Hakkımda</h2>
+            <h2>Over mij</h2>
             <p>
-                Buraya kendin hakkında kısa bir yazı yazacaksın.
-                Örneğin: Şu an Hollanda'da yaşıyorum, Software Developer eğitimi alıyorum
-                ve Python & JavaScript alanında kendimi geliştiriyorum.
+                over jezelf
             </p>
         </section>
 
-        <!-- 3) Yetenekler Bölümü -->
+        <!-- 3) Vaardigheden sectie -->
         <section id="skills">
-            <h2>Yetenekler</h2>
+            <h2>Vaardigheden</h2>
             <ul>
                 <li>Python</li>
                 <li>JavaScript</li>
@@ -45,38 +43,40 @@
             </ul>
         </section>
 
-        <!-- 4) Projeler Bölümü -->
+        <!-- 4) Projecten sectie -->
         <section id="projects">
-            <h2>Projeler</h2>
+            <h2>Projecten</h2>
 
             <article>
-                <h3>Lootbox Oyunu (Python)</h3>
+                <h3>Lootbox Game (Python)</h3>
                 <p>
-                    Python ile yazdığım kullanıcı giriş kontrollü bir lootbox oyunu.
-                    random.choices(), try-except ve input kontrolleri kullanıldı.
+                    Een lootbox-spel dat ik in Python heb geschreven met gebruikersinvoer-controle.
+                    Er is gebruikgemaakt van random.choices(), try-except en input-validatie.
                 </p>
             </article>
 
             <article>
-                <h3>Örnek Web Projesi</h3>
+                <h3>Voorbeeld Webproject</h3>
                 <p>
-                    Buraya gelecekte yapacağın web projelerini ekleyebilirsin.
+                     In de toekomst  webprojecten toevoegen.
                 </p>
             </article>
         </section>
 
-        <!-- 5) İletişim Bölümü -->
+        <!-- 5) Contact sectie -->
         <section id="contact">
-            <h2>İletişim</h2>
+            <h2>Contact</h2>
             <p>Email: <a href="mailto:seninmailin@example.com">seninmailin@example.com</a></p>
-            <p>GitHub: <a href="#" target="_blank">GitHub Profilin</a></p>
-            <p>LinkedIn: <a href="#" target="_blank">LinkedIn Profilin</a></p>
+            <p>GitHub: <a href="#" target="_blank">Je GitHub-profiel</a></p>
+            <p>LinkedIn: <a href="#" target="_blank">Je LinkedIn-profiel</a></p>
         </section>
     </main>
 
-    <!-- 6) Alt bilgi -->
+    <!-- 6) Voettekst -->
     <footer>
-        <p>© 2025 Merha ben Cesim. Tüm hakları saklıdır.</p>
+        <p>© 2025 Merha ben Cesim. Alle rechten voorbehouden.</p>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
